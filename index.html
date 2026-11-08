@@ -1,0 +1,62 @@
+<!--
+  Student: YOUR NAME (ID: YOUR ID)
+  Module: Intro to JavaScript
+  Assignment: JavaScript - Interactive Task Manager Week 8
+  Lecturer: Ms C. Anuli
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab: Interactive Task Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Interactive Task Manager</h1>
+      <p>Plan it, do it, tick it off</p>
+    </header>
+
+    <main>
+      <!-- Form Section to Add Tasks -->
+      <section class="form-section">
+        <h2>Add a New Task</h2>
+        <form id="task-form">
+          <div class="input-group">
+            <label for="task-title">Task</label>
+            <input
+              type="text"
+              id="task-title"
+              placeholder="e.g., Finish JavaScript lab"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="task-priority">Priority</label>
+            <select id="task-priority">
+              <option value="low">Low</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+
+          <button type="submit" id="add-btn">Add Task</button>
+        </form>
+      </section>
+
+      <!-- Display Section for Tasks -->
+      <section class="list-section">
+        <h2>My Tasks</h2>
+        <p id="task-stats" class="stats"></p>
+        <div id="task-list">
+          <!-- Dynamically generated tasks will go here -->
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
